@@ -1,0 +1,13 @@
+<svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="image" clip-path="url(#clip0_751_2245)">
+<g id="Group">
+<path id="Vector" d="M0 12.9475C0 6.04695 5.59048 0.429688 12.5 0.429688C19.4089 0.429688 25 6.04754 25 12.9475C25 19.8464 19.4089 25.4297 12.5 25.4297C5.59048 25.4297 0 19.8464 0 12.9475Z" fill="#F93F23"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M9.25781 13.375H11.109V18.994H13.4245V13.375H15.74V11.0631H13.4245V9.89044C13.4245 9.49937 13.6733 9.17972 13.8888 9.17972H15.74V6.90234H13.8888C12.3554 6.90234 11.109 8.25353 11.109 9.92496V11.0637H9.25781V13.375Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_751_2245">
+<rect width="25" height="25" fill="white" transform="translate(0 0.429688)"/>
+</clipPath>
+</defs>
+</svg>
