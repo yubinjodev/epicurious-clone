@@ -54,6 +54,7 @@ a:hover {
 :root {
   font-family: "Playfair Display", serif;
   font-size: 8px;
+  color: #333333;
 }
 
 h1 {
@@ -86,4 +87,22 @@ p, div, button, li, a, input, textarea {
 
 .caption {
   font-family: "Montserrat", sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Navbar-root, .Navbar-root > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar-root > ul, .Navbar-root > ul > ul {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }/*# sourceMappingURL=main.css.map */
