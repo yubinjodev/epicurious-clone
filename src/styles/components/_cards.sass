@@ -1,0 +1,19 @@
+@use "../global/_colors" as _colors
+
+.ResultCard-root
+    background: _colors.$white
+    color: _colors.$black-500
+    padding: 2rem
+    img
+        max-width: 14rem
+    &__text
+        strong
+            color: _colors.$main
+        h1
+            font-size: 2rem
+        .rating
+            &__stars
+                font-weight: 700
+                color: _colors.$black-100
+            &__reviews
+                color: _colors.$green

@@ -1,9 +1,35 @@
-.Navbar-root
+.flex
     display: flex
+
+.row
+    @extend .flex
     flex-direction: row
+    column-gap: 1rem
+    row-gap: 1rem
+
+.col
+    @extend .row
+    flex-direction: column
+
+.Navbar-root
+    @extend .row
     justify-content: space-between
     align-items: center
 
 .Navbar-root > ul
     @extend .Navbar-root
-    column-gap: 1rem
+
+.Searchbar-root, .Home-root
+    @extend .col
+    justify-content: center
+    align-items: center
+
+.ResultCard-root
+    @extend .row
+    &__text
+        @extend .col
+        row-gap: 0
+        column-gap: 0
+        justify-content: space-around
+        .rating
+            @extend .ResultCard-root

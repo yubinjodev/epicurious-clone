@@ -1,12 +1,15 @@
 <script setup>
 import Navbar from "./components/Navbar.vue"
+import Home from "./components/Home.vue"
+import Searchbar from "./components/Searchbar.vue";
+import Results from "./components/Results.vue";
 </script>
 
 <template>
-  <header class="Navbar-root">
-    <Navbar/>
-  </header>
-
-  <main>
-  </main>
+<!-- <Navbar/> -->
+<Searchbar/>
+<main>
+    <!-- <Home/> -->
+    <Results/>
+</main>
 </template>
