@@ -1,11 +1,11 @@
-@use "../global/colors"
+@use "../global/_colors" as _colors
 
 .Home-root
     height: 100vh
     background-image: url("../assets/images/background.png")
     background-repeat: no-repeat
     background-size: cover
-    color: colors.$white
+    color: _colors.$white
     .links
         display: flex
         column-gap: 1rem
@@ -17,3 +17,28 @@
         background-repeat: no-repeat
         background-position-y: center
         background-position-x: 1rem
+
+.Recipe-root
+    &__card
+        text-align: center
+        img
+            min-width: 100vw
+        .label
+            color: _colors.$white
+            background: _colors.$main
+            width: fit-content
+            padding: 1rem
+    &__text
+        hr
+            border: none
+            height: 2px
+            background: _colors.$muted
+        .servings
+            background: _colors.$muted
+            width: fit-content
+            padding: 1rem
+        dt
+            font-weight: 700
+            font-family: 'Montserrat', sans-serif
+        dl, dd:last-of-type
+            margin-bottom: 0

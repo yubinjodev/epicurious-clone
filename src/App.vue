@@ -3,13 +3,15 @@ import Navbar from "./components/Navbar.vue"
 import Home from "./components/Home.vue"
 import Searchbar from "./components/Searchbar.vue";
 import Results from "./components/Results.vue";
+import Recipe from "./components/Recipe.vue";
 </script>
 
 <template>
-<!-- <Navbar/> -->
-<Searchbar/>
+<Navbar/>
+<!-- <Searchbar/> -->
 <main>
     <!-- <Home/> -->
-    <Results/>
+    <!-- <Results/> -->
+    <Recipe/>
 </main>
 </template>
