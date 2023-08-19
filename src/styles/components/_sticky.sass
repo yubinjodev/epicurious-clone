@@ -1,0 +1,44 @@
+@use "../global/_colors" as _colors
+
+.Navbar-root, .Searchbar-root
+    padding: 2rem
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    background: _colors.$white
+    border-bottom: 1px solid _colors.$black-100
+
+.Searchbar-root
+    position: sticky
+    background: _colors.$main
+    padding: 2rem 2rem
+    img[alt="text logo"]
+        max-width: 10rem
+    input
+        border: none
+        background-image: url("../assets/icons/search-icon-dark.svg")
+        background-repeat: no-repeat
+        background-position-y: center
+        background-position-x: 1rem
+        padding: 1rem 0 1rem 4rem
+        width: 100%
+
+.Bottom-root
+    text-align: center
+    background: _colors.$black-500
+    padding: 6rem 3rem
+    color: _colors.$white
+    &__intro, &__group, &__copyright, &__more a, &__connect a
+        font-size: 1.5rem !important
+    &__more li, &__connect li
+        display: none
+        margin-bottom: 0
+    &__more li:first-of-type, &__connect li:first-of-type
+        display: list-item
+    &__socials
+        width: 100%
+        & > li
+            margin-bottom: 0
+    & > img
+        max-width: 10rem

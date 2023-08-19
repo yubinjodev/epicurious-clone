@@ -4,6 +4,7 @@ import Home from "./components/Home.vue"
 import Searchbar from "./components/Searchbar.vue";
 import Results from "./components/Results.vue";
 import Recipe from "./components/Recipe.vue";
+import Bottom from "./components/Bottom.vue";
 </script>
 
 <template>
@@ -14,4 +15,6 @@ import Recipe from "./components/Recipe.vue";
     <!-- <Results/> -->
     <Recipe/>
 </main>
+
+<Bottom/>
 </template>

@@ -18,6 +18,8 @@
 
 .Navbar-root > ul
     @extend .Navbar-root
+    li
+        margin-bottom: 0
 
 .Searchbar-root, .Home-root
     @extend .col
@@ -40,3 +42,11 @@
         @extend .col
     &__card
         align-items: center
+
+.Bottom-root
+    @extend .col
+    align-items: center
+    row-gap: 2rem
+    &__socials
+        @extend .row
+        justify-content: space-between
