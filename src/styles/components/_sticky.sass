@@ -2,7 +2,7 @@
 
 .Navbar-root, .Searchbar-root
     padding: 2rem
-    position: fixed
+    position: sticky
     width: 100%
     top: 0
     left: 0
@@ -29,13 +29,11 @@
     background: _colors.$black-500
     padding: 6rem 3rem
     color: _colors.$white
-    &__intro, &__group, &__copyright, &__more a, &__connect a
+    &__intro, &__group, &__copyright,&__more a, &__connect a, #more, #connect
         font-size: 1.5rem !important
-    &__more li, &__connect li
+    &__more, &__connect
         display: none
         margin-bottom: 0
-    &__more li:first-of-type, &__connect li:first-of-type
-        display: list-item
     &__socials
         width: 100%
         & > li
@@ -44,6 +42,7 @@
         max-width: 10rem
 
 .InputBar-root
+    display: none
     height: 100vh
     position: fixed
     top: 0
@@ -55,7 +54,6 @@
     img
         max-height: 2rem
         width: fit-content
-        margin-bottom: 0 !important
         float: right
     input
         background: transparent
@@ -66,3 +64,4 @@
         background-position-y: center
         background-position-x: 1rem
         padding: 2rem 0 2rem 6rem
+        width: 100%

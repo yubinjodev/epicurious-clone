@@ -80,7 +80,7 @@
 
 .Navbar-root, .Searchbar-root {
   padding: 2rem;
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   left: 0;
@@ -112,15 +112,12 @@
   padding: 6rem 3rem;
   color: #fff;
 }
-.Bottom-root__intro, .Bottom-root__group, .Bottom-root__copyright, .Bottom-root__more a, .Bottom-root__connect a {
+.Bottom-root__intro, .Bottom-root__group, .Bottom-root__copyright, .Bottom-root__more a, .Bottom-root__connect a, .Bottom-root #more, .Bottom-root #connect {
   font-size: 1.5rem !important;
 }
-.Bottom-root__more li, .Bottom-root__connect li {
+.Bottom-root__more, .Bottom-root__connect {
   display: none;
   margin-bottom: 0;
-}
-.Bottom-root__more li:first-of-type, .Bottom-root__connect li:first-of-type {
-  display: list-item;
 }
 .Bottom-root__socials {
   width: 100%;
@@ -133,6 +130,7 @@
 }
 
 .InputBar-root {
+  display: none;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -147,7 +145,6 @@
   max-height: 2rem;
   width: -moz-fit-content;
   width: fit-content;
-  margin-bottom: 0 !important;
   float: right;
 }
 .InputBar-root input {
@@ -159,6 +156,7 @@
   background-position-y: center;
   background-position-x: 1rem;
   padding: 2rem 0 2rem 6rem;
+  width: 100%;
 }
 
 body, dd, ul {
@@ -286,18 +284,18 @@ button {
   cursor: pointer;
 }
 
-.flex, .row, .Bottom-root__socials, .ResultCard-root, .ResultCard-root__text .rating, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .InputBar-root, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.flex, .row, .Bottom-root__socials, .ResultCard-root, .ResultCard-root__text .rating, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   display: flex;
 }
 
-.row, .Bottom-root__socials, .ResultCard-root, .ResultCard-root__text .rating, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .InputBar-root, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.row, .Bottom-root__socials, .ResultCard-root, .ResultCard-root__text .rating, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: row;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   row-gap: 1rem;
 }
 
-.col, .InputBar-root, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.col, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: column;
 }
 

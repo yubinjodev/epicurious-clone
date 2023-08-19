@@ -14,15 +14,15 @@
             <li><a  target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/epicurious/"><img alt="instagram logo" src="../assets/icons/socials/white/white-instagram.svg"></a></li>
         </ul>
 
+        <a id="more">MORE FROM EPICURIOUS ▼</a>
         <ul class="Bottom-root__more">
-            <li><a href="#">MORE FROM EPICURIOUS ▼</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/epicurious/id312101965">The Epicurious App</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://www.epicurious.com/newsletters">Newsletters</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://www.epicurious.com/info/epicurious-user-help-article">Subscription FAQs</a></li>
         </ul>
 
+        <a id="connect">CONNECT ▼</a>
         <ul class="Bottom-root__connect">
-            <li><a href="#">CONNECT ▼</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="http://www.condenast.com/careers">Careers</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://www.epicurious.com/about/press-center">Press Center</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://www.condenast.com/brands/epicurious/">Advertising</a></li>
