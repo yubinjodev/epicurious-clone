@@ -10,17 +10,17 @@
 
         <ul>
             <li>
-                <a href="">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/epicurious">
                     <img alt="contained facebook logo" src="../assets/icons/socials/contained/contained-facebook.svg">
                 </a>
             </li>
             <li>
-                <a href="">
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/epicurious">
                     <img alt="contained twitter logo" src="../assets/icons/socials/contained/contained-twitter.svg">
                 </a>
             </li>
             <li>
-                <a href="">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/epicurious/">
                     <img alt="contained instagram logo" src="../assets/icons/socials/contained/contained-instagram.svg">
                 </a>
             </li>

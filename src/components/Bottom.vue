@@ -7,18 +7,18 @@
             videos, and, oh yeah, over 33,000 recipes.
         </p>
         <ul class="Bottom-root__socials">
-            <li><img alt="facebook logo" src="../assets/icons/socials/white/white-facebook.svg"></li>
-            <li><img alt="twitter logo" src="../assets/icons/socials/white/white-twitter.svg"></li>
-            <li><img alt="pinterest logo" src="../assets/icons/socials/white/white-pinterest.svg"></li>
-            <li><img alt="youtube logo" src="../assets/icons/socials/white/white-youtube.svg"></li>
-            <li><img alt="instagram logo" src="../assets/icons/socials/white/white-instagram.svg"></li>
+            <li><a  target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/epicurious"><img alt="facebook logo" src="../assets/icons/socials/white/white-facebook.svg"></a></li>
+            <li><a  target="_blank" rel="noopener noreferrer" href="https://twitter.com/epicurious"><img alt="twitter logo" src="../assets/icons/socials/white/white-twitter.svg"></a></li>
+            <li><a  target="_blank" rel="noopener noreferrer" href="https://pinterest.com/epicurious/"><img alt="pinterest logo" src="../assets/icons/socials/white/white-pinterest.svg"></a></li>
+            <li><a  target="_blank" rel="noopener noreferrer" href="https://youtube.com/user/epicuriousdotcom"><img alt="youtube logo" src="../assets/icons/socials/white/white-youtube.svg"></a></li>
+            <li><a  target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/epicurious/"><img alt="instagram logo" src="../assets/icons/socials/white/white-instagram.svg"></a></li>
         </ul>
 
         <ul class="Bottom-root__more">
             <li><a href="#">MORE FROM EPICURIOUS ▼</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/epicurious/id312101965">The Epicurious App</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://www.epicurious.com/newsletters">Newsletters</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://www.epicurious.com/newsletters">Subscription FAQs</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.epicurious.com/info/epicurious-user-help-article">Subscription FAQs</a></li>
         </ul>
 
         <ul class="Bottom-root__connect">
