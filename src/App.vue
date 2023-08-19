@@ -5,15 +5,23 @@ import Searchbar from "./components/Searchbar.vue";
 import Results from "./components/Results.vue";
 import Recipe from "./components/Recipe.vue";
 import Bottom from "./components/Bottom.vue";
+import InputBar from "./components/InputBar.vue";
+</script>
+
+<script>
+$("#close").click(function(){
+    alert("hello")
+})
 </script>
 
 <template>
 <Navbar/>
 <!-- <Searchbar/> -->
 <main>
-    <!-- <Home/> -->
+    <Home/>
+    <InputBar/>
     <!-- <Results/> -->
-    <Recipe/>
+    <!-- <Recipe/> -->
 </main>
 
 <Bottom/>
