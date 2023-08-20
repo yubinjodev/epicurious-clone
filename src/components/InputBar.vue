@@ -5,7 +5,7 @@ const router = useRouter()
 
 function submitQuery(e){
     const inputValue = e.target[0].value
-    router.push(`/results?query=${inputValue}`)
+    router.push(`/results?search=${inputValue}`)
     $(".InputBar-root").slideUp()
 }
 </script>
@@ -16,7 +16,7 @@ function submitQuery(e){
 
         <form @submit.prevent="submitQuery">
             <input 
-            name="query"
+            name="search"
             placeholder="Find a Recipe" 
             >
         </form>

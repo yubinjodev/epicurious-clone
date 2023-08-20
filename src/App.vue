@@ -1,30 +1,28 @@
 <script setup>
 import Navbar from "./components/Navbar.vue"
-import Bottom from "./components/Bottom.vue";
 import InputBar from "./components/InputBar.vue";
+import Bottom from "./components/Bottom.vue";
 </script>
 
 <script>
 import $ from "jquery"
-export default {
-    mounted: window.onload=function(){
-        $("#home-input").click(function(){
-            $(".InputBar-root").slideDown()
-        })
+$(document).ready(function(){
+    $("#home-input").click(function(){
+        $(".InputBar-root").slideDown()
+    })
 
-        $("#close").click(function(){
-            $(".InputBar-root").slideUp()
-        })
+    $("#close").click(function(){
+        $(".InputBar-root").slideUp()
+    })
 
-        $("#more").click(function(){
-            $(".Bottom-root__more").slideToggle()
-        })
+    $("#more").click(function(){
+        $(".Bottom-root__more").slideToggle()
+    })
 
-        $("#connect").click(function(){
-            $(".Bottom-root__connect").slideToggle()
-        })
-    }
-}
+    $("#connect").click(function(){
+        $(".Bottom-root__connect").slideToggle()
+    })
+})
 </script>
 
 <template>

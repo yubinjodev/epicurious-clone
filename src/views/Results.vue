@@ -4,7 +4,7 @@ import ResultCard from '../cards/ResultCard.vue';
 
 <template>
     <section class="Results-root">
-        <p class="caption">2,504 matching results for fish</p>
+        <p class="caption">2,504 matching results for {{ $route.query.search }}</p>
         <ResultCard/>
     </section>
 
