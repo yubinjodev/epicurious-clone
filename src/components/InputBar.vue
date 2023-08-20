@@ -1,20 +1,24 @@
 <script setup>
+import $ from "jquery"
+import {useRouter} from "vue-router"
+const router = useRouter()
 
-function submitQuery(){
-    this.$router.push("/cock")
+function submitQuery(e){
+    const inputValue = e.target[0].value
+    router.push(`/results?query=${inputValue}`)
+    $(".InputBar-root").slideUp()
 }
 </script>
 
 <template>
     <section class="InputBar-root">
         <img alt="close" src="../assets/icons/close.svg" id="close"> 
-        <form>
+
+        <form @submit.prevent="submitQuery">
             <input 
-            name="recipe"
+            name="query"
             placeholder="Find a Recipe" 
-            @keypress.enter=""
             >
-            <button type="submit">send</button>
         </form>
     </section>
 </template>
