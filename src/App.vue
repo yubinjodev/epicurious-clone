@@ -2,26 +2,7 @@
 import Navbar from "./components/Navbar.vue"
 import InputBar from "./components/InputBar.vue";
 import Bottom from "./components/Bottom.vue";
-import $ from "jquery"
 
-$(document).ready(function(){
-    $("#home-input").click(function(){
-        $(".InputBar-root").slideDown()
-        $("#searchbar").focus()
-    })
-
-    $("#close").click(function(){
-        $(".InputBar-root").slideUp()
-    })
-
-    $("#more").click(function(){
-        $(".Bottom-root__more").slideToggle()
-    })
-
-    $("#connect").click(function(){
-        $(".Bottom-root__connect").slideToggle()
-    })
-})
 </script>
 
 <template>

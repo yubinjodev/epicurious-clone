@@ -11,6 +11,18 @@ function submitQuery(){
     $(".InputBar-root").slideUp()
 }
 
+$(document).ready(function(){
+    $("#home-input").click(function(){
+    $(".InputBar-root").slideDown()
+    $("#searchbar").focus()
+})
+
+$("#close").click(function(){
+    $(".InputBar-root").slideUp()
+})
+})
+
+
 </script>
 
 <template>

@@ -1,3 +1,16 @@
+<script setup>
+import $ from "jquery"
+$(document).ready(function(){
+    $("#more").click(function(){
+        $(".Bottom-root__more").slideToggle()
+    })
+
+    $("#connect").click(function(){
+        $(".Bottom-root__connect").slideToggle()
+    })
+})
+</script>
+
 <template>
     <footer class="Bottom-root">
         <img alt="text logo" src="../assets/icons/logo/text-logo-white.svg">
