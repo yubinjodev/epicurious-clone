@@ -7,6 +7,7 @@ import $ from "jquery"
 $(document).ready(function(){
     $("#home-input").click(function(){
         $(".InputBar-root").slideDown()
+        $("#searchbar").focus()
     })
 
     $("#close").click(function(){

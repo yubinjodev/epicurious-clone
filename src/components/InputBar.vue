@@ -19,6 +19,7 @@ function submitQuery(e){
 
         <form @submit.prevent="submitQuery">
             <input 
+            id="searchbar"
             v-model="query"
             name="search"
             placeholder="Find a Recipe" 
