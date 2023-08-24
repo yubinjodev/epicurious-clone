@@ -2,10 +2,8 @@
 import Navbar from "./components/Navbar.vue"
 import InputBar from "./components/InputBar.vue";
 import Bottom from "./components/Bottom.vue";
-</script>
-
-<script>
 import $ from "jquery"
+
 $(document).ready(function(){
     $("#home-input").click(function(){
         $(".InputBar-root").slideDown()

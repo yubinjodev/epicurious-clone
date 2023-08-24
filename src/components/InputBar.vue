@@ -1,13 +1,16 @@
 <script setup>
 import $ from "jquery"
+import { ref } from "vue";
 import {useRouter} from "vue-router"
 const router = useRouter()
 
+const query = ref("")
+
 function submitQuery(e){
-    const inputValue = e.target[0].value
-    router.push(`/results?search=${inputValue}`)
+    router.push(`/recipe/?search=${query.value}`)
     $(".InputBar-root").slideUp()
 }
+
 </script>
 
 <template>
@@ -16,6 +19,7 @@ function submitQuery(e){
 
         <form @submit.prevent="submitQuery">
             <input 
+            v-model="query"
             name="search"
             placeholder="Find a Recipe" 
             >
