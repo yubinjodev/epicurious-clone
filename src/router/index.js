@@ -4,15 +4,18 @@ import Home from "../views/Home.vue";
 
 const routes = [
   {
+    name: "Home",
     path: "/",
     component: Home,
   },
   {
+    name: "Results",
     path: "/results",
     component: () => import("../views/Results.vue"),
   },
   {
-    path: "/recipe",
+    name: "Recipe",
+    path: "/recipe/:id",
     component: () => import("../views/Recipe.vue"),
   },
 ];

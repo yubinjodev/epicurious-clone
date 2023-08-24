@@ -6,7 +6,11 @@ const props = defineProps(["result"])
 const {strMeal, strCategory, strTags, strMealThumb, idMeal } = props.result
 
 const handleClickRecipeCard = ()=> {
-    router.push(`/recipe/${idMeal}`)
+    // router.push(`/recipe/${idMeal}`)
+    router.push({
+        name: "Recipe",
+        params: {id: idMeal}
+    })
 }
 </script>
 

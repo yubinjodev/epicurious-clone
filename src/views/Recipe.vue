@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
     <section class="Recipe-root">
         <div class="Recipe-root__card">
