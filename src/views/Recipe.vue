@@ -1,5 +1,6 @@
 <script setup>
-
+const {id} = defineProps(["id"])
+console.log(id);
 </script>
 
 <template>

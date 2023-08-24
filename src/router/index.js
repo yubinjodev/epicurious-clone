@@ -12,11 +12,13 @@ const routes = [
     name: "Results",
     path: "/results",
     component: () => import("../views/Results.vue"),
+    props: (route) => ({ query: route.query.search }),
   },
   {
     name: "Recipe",
     path: "/recipe/:id",
     component: () => import("../views/Recipe.vue"),
+    props: (route) => ({ id: route.params.id }),
   },
 ];
 

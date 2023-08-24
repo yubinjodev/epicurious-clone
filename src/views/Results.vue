@@ -1,10 +1,8 @@
 <script setup>
-import { useRoute } from "vue-router";
 import ResultCard from '../cards/ResultCard.vue';
 import getPosts from "../composables/getPosts"
 
-const route = useRoute()
-const query = route.query.search
+const { query } = defineProps(["query"])
 const { results, recipesLength } = getPosts(query)
 
 </script>
