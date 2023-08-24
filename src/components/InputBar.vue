@@ -7,7 +7,7 @@ const router = useRouter()
 const query = ref("")
 
 function submitQuery(e){
-    router.push(`/recipe/?search=${query.value}`)
+    router.push(`/results/?search=${query.value}`)
     $(".InputBar-root").slideUp()
 }
 
