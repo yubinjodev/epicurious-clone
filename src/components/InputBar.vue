@@ -6,7 +6,7 @@ const router = useRouter()
 
 const query = ref("")
 
-function submitQuery(e){
+function submitQuery(){
     router.push(`/results/?search=${query.value}`)
     $(".InputBar-root").slideUp()
 }
@@ -22,7 +22,7 @@ function submitQuery(e){
             id="searchbar"
             v-model="query"
             name="search"
-            placeholder="Find a Recipe" 
+            placeholder="fish" 
             >
         </form>
     </section>

@@ -1,22 +1,24 @@
 <script setup>
-import {useRouter} from "vue-router"
+import { useRouter } from "vue-router";
 const router = useRouter()
+const props = defineProps(["result"])
 
-function handleClickRecipeCard(){
-    router.push("/recipe/test")
+const {strMeal, strCategory, strTags, strMealThumb, idMeal } = props.result
+
+const handleClickRecipeCard = ()=> {
+    router.push(`/recipe/${idMeal}`)
 }
 </script>
 
 <template>
     <article class="ResultCard-root" @click="handleClickRecipeCard">
-        <img alt="fish" src="../assets/images/fish-recipe.png"/>
+        <img alt="fish" :src="strMealThumb"/>
         <div class="ResultCard-root__text">
-            <strong class="caption">RECIPE</strong>
-            <h1>Whole Steamed Fish</h1>
-            <span class="rating caption">
-                <span class="rating__stars">0/5</span>
-                <span class="rating__reviews">REVIEWS (31)</span>
-            </span>
+            <strong class="caption">{{strCategory.toUpperCase()}}</strong>
+            <h1>{{ strMeal }}</h1>
+            <ul class="ResultCard-root__tags">
+                <li v-if="strTags" v-for="tag in strTags.split(',')">#{{ tag }}</li>
+            </ul>
         </div>
     </article>
 </template>

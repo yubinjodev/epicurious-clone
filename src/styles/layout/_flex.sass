@@ -33,8 +33,11 @@
         row-gap: 0
         column-gap: 0
         justify-content: space-around
-        .rating
-            @extend .ResultCard-root
+    &__tags
+        @extend .row
+        flex-wrap: wrap
+        & > li
+            margin-bottom: 0
 
 .Recipe-root
     @extend .col
