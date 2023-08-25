@@ -1,17 +1,31 @@
 <script setup>
+import { onUnmounted, watch } from "vue";
+import filterIngredients from "../composables/filterIngredients";
+import getPost from "../composables/getPost";
+
 const {id} = defineProps(["id"])
-console.log(id);
+const {recipe} = getPost(id)
+
+watch(recipe, ()=>{
+    const {ingredients} = filterIngredients(recipe.value)
+    console.log(ingredients.value);
+})
+
+onUnmounted(()=>{
+})
+
 </script>
 
 <template>
-    <section class="Recipe-root">
+    <section class="Recipe-root" v-if="recipe" >
         <div class="Recipe-root__card">
             <p class="label caption">COOKBOOKS</p>
-            <h1>Whole Steamed Fish</h1>
+            <h1>{{ recipe.strMeal }}</h1>
             <p class="caption">BY FRANKIE GAW</p>
             <time datetime="2023-01-09">January 9, 2023</time>
             <figure>
-                <img alt="fish" src="../assets/images/fish-recipe.png">
+                <img alt="fish" v-if="recipe.strImageSource" :src="recipe.strImageSource">
+                <img alt="fish" v-else :src="recipe.strMealThumb">
                 <figcaption>Photo by Frankie Gaw</figcaption>
             </figure>
         </div>
