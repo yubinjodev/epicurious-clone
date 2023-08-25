@@ -19,7 +19,6 @@ const filterIngredients = (recipe) => {
       }
     }
   }
-  console.log("ingredients from js", ingredients);
   return ingredients;
 };
 
