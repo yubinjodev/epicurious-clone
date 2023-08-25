@@ -1,8 +1,4 @@
-import { ref } from "vue";
-
-const ingredients = ref([]);
-
-const combineIngredients = (key, recipe) => {
+const combineIngredients = (key, recipe, ingredients) => {
   if (key.includes("Ingredient")) {
     const index = key.replace("strIngredient", "");
     const {
@@ -10,19 +6,21 @@ const combineIngredients = (key, recipe) => {
       [`strMeasure${index}`]: measure,
     } = recipe;
     const combined = `${measure} ${ingredient}`;
-    ingredients.value.push(combined);
+    ingredients.push(combined);
   }
 };
 
 const filterIngredients = (recipe) => {
+  const ingredients = [];
   for (const key in recipe) {
     if (recipe[key]) {
       if (key.includes("Ingredient") || key.includes("Measure")) {
-        combineIngredients(key, recipe);
+        combineIngredients(key, recipe, ingredients);
       }
     }
   }
-  return { ingredients };
+  console.log("ingredients from js", ingredients);
+  return ingredients;
 };
 
 export default filterIngredients;

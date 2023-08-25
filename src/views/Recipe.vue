@@ -1,19 +1,22 @@
 <script setup>
-import { onUnmounted, watch } from "vue";
+import { onUnmounted, ref, watch } from "vue";
 import filterIngredients from "../composables/filterIngredients";
 import getPost from "../composables/getPost";
 
 const {id} = defineProps(["id"])
 const {recipe} = getPost(id)
+const ingredients = ref([])
 
-watch(recipe, ()=>{
-    const {ingredients} = filterIngredients(recipe.value)
-    console.log(ingredients.value);
-})
+watch(recipe, () => {
+    console.log("recipe",recipe.value);
+  ingredients.value = filterIngredients(recipe.value);
+  console.log("ingredients",ingredients.value);
+});
 
-onUnmounted(()=>{
-})
-
+onUnmounted(() => {
+  ingredients.value = null
+  console.log("unmounted");
+});
 </script>
 
 <template>
