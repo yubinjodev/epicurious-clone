@@ -1,4 +1,5 @@
 @use "../global/_colors" as _colors
+@use "../util/_breakpoints" as _breakpoints
 
 .Home-root
     height: 100vh
@@ -19,6 +20,9 @@
         background-repeat: no-repeat
         background-position-y: center
         background-position-x: 1rem
+        @include _breakpoints.breakpoint(md)
+            width: 100%
+            max-width: 75rem
 
 .Recipe-root
     &__card

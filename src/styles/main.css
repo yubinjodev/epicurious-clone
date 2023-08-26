@@ -22,6 +22,12 @@
   background-position-y: center;
   background-position-x: 1rem;
 }
+@media ((min-width: 900px)) {
+  .Home-root input {
+    width: 100%;
+    max-width: 75rem;
+  }
+}
 
 .Recipe-root__card {
   text-align: center;
