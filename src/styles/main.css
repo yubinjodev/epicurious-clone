@@ -377,4 +377,5 @@ button {
 }
 .Bottom-root__socials {
   justify-content: space-between;
+  max-width: 45rem;
 }/*# sourceMappingURL=main.css.map */

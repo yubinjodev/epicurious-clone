@@ -1,3 +1,5 @@
+@use "../util/_breakpoints" as _breakpoints
+
 .flex
     display: flex
 
@@ -53,6 +55,7 @@
     &__socials
         @extend .row
         justify-content: space-between
+        max-width: 45rem
 
 .MockCard-root
     @extend .row
