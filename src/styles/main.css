@@ -103,8 +103,30 @@
   padding: 2rem;
   cursor: pointer;
 }
+@media ((min-width: 600px)) {
+  .ResultCard-root {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 42rem;
+    min-height: 46rem;
+  }
+}
 .ResultCard-root img {
   max-width: 14rem;
+}
+@media ((min-width: 600px)) {
+  .ResultCard-root img {
+    max-width: unset;
+    max-height: 29rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media ((min-width: 600px)) {
+  .ResultCard-root__text {
+    padding: 2rem;
+  }
 }
 .ResultCard-root__text strong {
   color: #F93F23;
@@ -354,6 +376,11 @@ button {
   align-items: center;
 }
 
+@media ((min-width: 600px)) {
+  .ResultCard-root {
+    flex-direction: column;
+  }
+}
 .ResultCard-root__text {
   row-gap: 0;
   -moz-column-gap: 0;

@@ -1,4 +1,5 @@
 @use "../global/_colors" as _colors
+@use "../util/_breakpoints" as _breakpoints
 
 @keyframes glowing
     0%
@@ -35,9 +36,21 @@
     color: _colors.$black-500
     padding: 2rem
     cursor: pointer
+    @include _breakpoints.breakpoint(sm)
+        padding: 0
+        width: 100%
+        height: 100%
+        max-width: 42rem
+        min-height: 46rem
     img
         max-width: 14rem
+        @include _breakpoints.breakpoint(sm)
+            max-width: unset
+            max-height: 29rem
+            object-fit: cover
     &__text
+        @include _breakpoints.breakpoint(sm)
+            padding: 2rem
         strong
             color: _colors.$main
         h1

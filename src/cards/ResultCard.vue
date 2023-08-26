@@ -15,7 +15,7 @@ const handleClickRecipeCard = ()=> {
 
 <template>
     <article class="ResultCard-root" @click="handleClickRecipeCard">
-        <img alt="fish" :src="strMealThumb"/>
+        <img :alt="strMeal" :src="strMealThumb"/>
         <div class="ResultCard-root__text">
             <strong class="caption">{{strCategory.toUpperCase()}}</strong>
             <h1>{{ strMeal }}</h1>

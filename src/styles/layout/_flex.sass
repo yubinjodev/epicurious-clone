@@ -30,6 +30,8 @@
 
 .ResultCard-root
     @extend .row
+    @include _breakpoints.breakpoint(sm)
+        flex-direction: column
     &__text
         @extend .col
         row-gap: 0
