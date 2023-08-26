@@ -1,5 +1,5 @@
 <template>
-    <header class="Navbar-root">
+    <div class="Navbar-root">
         <button>
             <img alt="hamburger menu" src="../assets/icons/hamburger.svg">
         </button>
@@ -25,5 +25,5 @@
                 </a>
             </li>
         </ul>
-    </header>
+    </div>
 </template>

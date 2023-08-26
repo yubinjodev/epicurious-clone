@@ -2,13 +2,18 @@
 import Navbar from "./components/Navbar.vue"
 import InputBar from "./components/InputBar.vue";
 import Bottom from "./components/Bottom.vue";
-
+import Searchbar from "./components/Searchbar.vue";
 </script>
 
 <template>
-<Navbar/>
+    <header v-if="$route.path.includes('results') || $route.path.includes('recipe')">
+        <Searchbar/>
+    </header>
+    <header v-else>
+        <Navbar/>
+    </header>
 <main>
-    <RouterView/>
+    <router-view :key="$route.fullPath"/>
     <InputBar/>
 </main>
 

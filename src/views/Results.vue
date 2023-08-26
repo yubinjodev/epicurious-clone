@@ -4,6 +4,7 @@ import { watch } from "vue";
 import ResultCard from '../cards/ResultCard.vue';
 import getPosts from "../composables/getPosts"
 import MockCard from "../cards/MockCard.vue"
+import { onMounted, onUnmounted } from 'vue'
 
 const { query } = defineProps(["query"])
 const { results, recipesLength } = getPosts(query)

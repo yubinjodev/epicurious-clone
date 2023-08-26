@@ -128,7 +128,10 @@
 .Searchbar-root img[alt="text logo"] {
   max-width: 10rem;
 }
-.Searchbar-root input {
+.Searchbar-root form {
+  width: 100%;
+}
+.Searchbar-root form input {
   border: none;
   background-image: url("../assets/icons/search-icon-dark.svg");
   background-repeat: no-repeat;
