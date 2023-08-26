@@ -1,10 +1,25 @@
 <script setup>
+import $ from "jquery"
+import { watch } from "vue";
 import ResultCard from '../cards/ResultCard.vue';
 import getPosts from "../composables/getPosts"
+import MockCard from "../cards/MockCard.vue"
 
 const { query } = defineProps(["query"])
 const { results, recipesLength } = getPosts(query)
 
+watch(results, ()=>{
+    if(results.value !== 404){
+        $(".Results-root").css("height", "100%")
+    }
+    if(results.value === 404 || !results){
+        $(".Bottom-root").css({
+            "position": "sticky",
+            "bottom":"0",
+            "left":"0",
+        })
+    }
+})
 </script>
 
 <template>
@@ -12,11 +27,21 @@ const { results, recipesLength } = getPosts(query)
         <p class="caption" v-if="recipesLength">
             {{ recipesLength }} matching results for {{ $route.query.search }}
         </p>
-            <ResultCard 
-            :result="result" 
-            v-for="result in results.meals" 
-            :key="result.idMeal"
-            />
+        <div class="Results-root__alt" v-if="!recipesLength && results !== 404">
+            <p class="caption">Loading...</p>
+            <MockCard/>
+            <MockCard/>
+        </div>
+
+        <p v-if="results === 404">
+            Uh oh. We didn't find the search term <span>"{{ $route.query.search }}"</span> that you were looking for.
+        </p>
+
+        <ResultCard 
+        :result="result" 
+        v-for="result in results.meals" 
+        :key="result.idMeal"
+        />
     </section>
 
 </template>
@@ -25,6 +50,11 @@ const { results, recipesLength } = getPosts(query)
 .Results-root{
     background: #333333;
     color: #fff;
-    height: 100%
+    height: 100vh
+}
+
+span{
+    font-style: italic;
+    text-decoration: underline;
 }
 </style>

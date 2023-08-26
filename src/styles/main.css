@@ -55,6 +55,42 @@
   margin-bottom: 0;
 }
 
+@keyframes glowing {
+  0% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+.MockCard-root {
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.MockCard-root__image, .MockCard-root__text > div {
+  animation: infinite ease 2s glowing;
+}
+.MockCard-root__image, .MockCard-root__text {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+.MockCard-root__text {
+  background: none;
+}
+.MockCard-root__text div {
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 3.5rem;
+}
+
 .ResultCard-root {
   background: #fff;
   color: #333333;
@@ -280,18 +316,18 @@ button {
   cursor: pointer;
 }
 
-.flex, .row, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.flex, .row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   display: flex;
 }
 
-.row, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: row;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   row-gap: 1rem;
 }
 
-.col, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.col, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: column;
 }
 

@@ -20,7 +20,7 @@ const handleClickRecipeCard = ()=> {
             <strong class="caption">{{strCategory.toUpperCase()}}</strong>
             <h1>{{ strMeal }}</h1>
             <ul class="ResultCard-root__tags">
-                <li v-if="strTags" v-for="tag in strTags.split(',')">#{{ tag }}</li>
+                <li v-if="strTags" v-for="tag in strTags.split(',')">#{{ tag.toLowerCase() }}</li>
             </ul>
         </div>
     </article>
