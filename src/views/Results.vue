@@ -38,11 +38,15 @@ watch(results, ()=>{
             Uh oh. We didn't find the search term <span>"{{ $route.query.search }}"</span> that you were looking for.
         </p>
 
-        <ResultCard 
-        :result="result" 
-        v-for="result in results.meals" 
-        :key="result.idMeal"
-        />
+        <div class="Results-root__cards-container">
+            <div class="Results-root__cards">
+                <ResultCard 
+                :result="result" 
+                v-for="result in results.meals" 
+                :key="result.idMeal"
+                />
+            </div>
+        </div>
     </section>
 
 </template>

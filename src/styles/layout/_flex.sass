@@ -63,3 +63,22 @@
     @extend .row
     &__text
         @extend .col
+
+.Results-root
+    &__cards-container
+        @include _breakpoints.breakpoint(sm)
+            display: flex
+            justify-content: center
+            align-items: center
+    &__cards
+        @extend .col
+        @include _breakpoints.breakpoint(sm)
+            width: fit-content
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 1rem
+            grid-row-gap: 1rem
+        @include _breakpoints.breakpoint(md)
+            grid-template-columns: repeat(3, 1fr)
+        @include _breakpoints.breakpoint(lg)
+            grid-template-columns: repeat(4, 1fr)

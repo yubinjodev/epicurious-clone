@@ -108,7 +108,7 @@
     padding: 0;
     width: 100%;
     height: 100%;
-    max-width: 42rem;
+    max-width: 35rem;
     min-height: 46rem;
   }
 }
@@ -347,18 +347,18 @@ button {
   cursor: pointer;
 }
 
-.flex, .row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.flex, .row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   display: flex;
 }
 
-.row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: row;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   row-gap: 1rem;
 }
 
-.col, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: column;
 }
 
@@ -405,4 +405,32 @@ button {
 .Bottom-root__socials {
   justify-content: space-between;
   max-width: 45rem;
+}
+
+@media ((min-width: 600px)) {
+  .Results-root__cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media ((min-width: 600px)) {
+  .Results-root__cards {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+}
+@media ((min-width: 900px)) {
+  .Results-root__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media ((min-width: 1200px)) {
+  .Results-root__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */
