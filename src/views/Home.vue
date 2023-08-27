@@ -1,6 +1,6 @@
 <template>
     <article class="Home-root">
-        <h1>Find a Recipe</h1>
+        <label for="home-input">Find a Recipe</label>
         <input id="home-input" class="test"/>
         <span class="links">
             <a href="#">ADVANCED SEARCH</a>

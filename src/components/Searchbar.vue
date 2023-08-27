@@ -16,7 +16,9 @@ function submitQuery(){
             <img alt="text logo" src="../assets/icons/logo/text-logo-white.svg">
         </a>
         <form @submit.prevent="submitQuery">
+            <label for="search" hidden>Search</label>
             <input 
+            id="search"
             v-model="query"
             name="search"
             :placeholder="query"

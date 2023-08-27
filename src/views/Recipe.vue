@@ -48,11 +48,9 @@ watch(recipe, () => {
             <div>
                 <h2 class="caption">Instructions</h2>
                 <hr>
-                <dl>
-                    <div v-if="instructions" v-for="(instruction, index) in instructions">
-                        <dt>STEP {{ index+1 }}</dt>
-                        <dd>{{ instruction }}</dd>
-                    </div>
+                <dl v-if="instructions" v-for="(instruction, index) in instructions">
+                    <dt>STEP {{ index+1 }}</dt>
+                    <dd>{{ instruction }}</dd>
                 </dl>
             </div>
         </section>
@@ -62,5 +60,9 @@ watch(recipe, () => {
 <style>
 .Recipe-root{
     margin-top: 9rem;
+}
+
+h3{
+    font-size: 2.5rem;
 }
 </style>

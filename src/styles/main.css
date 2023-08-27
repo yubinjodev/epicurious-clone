@@ -13,6 +13,9 @@
 .Home-root .links img {
   max-width: 1rem;
 }
+.Home-root label {
+  font-size: 5rem;
+}
 .Home-root input {
   padding: 2rem 0 2rem 6rem;
   background-color: rgba(255, 255, 255, 0.75);
@@ -53,7 +56,7 @@
 }
 .Recipe-root__card .label {
   color: #fff;
-  background: #F93F23;
+  background: #EB1808;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem;
@@ -154,13 +157,13 @@
   }
 }
 .ResultCard-root__text strong {
-  color: #F93F23;
+  color: #EB1808;
 }
 .ResultCard-root__text h1 {
   font-size: 2.5rem;
 }
 .ResultCard-root__tags {
-  color: #83b838;
+  color: #4C8508;
 }
 
 .Navbar-root, .Searchbar-root {
