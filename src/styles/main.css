@@ -29,11 +29,27 @@
   }
 }
 
+@media ((min-width: 600px)) {
+  .Recipe-root {
+    margin-top: 0 !important;
+  }
+}
 .Recipe-root__card {
   text-align: center;
 }
-.Recipe-root__card img {
+@media ((min-width: 600px)) {
+  .Recipe-root__card figure, .Recipe-root__card div {
+    margin: 0;
+    width: 50vw;
+  }
+}
+.Recipe-root__card figure img, .Recipe-root__card div img {
   min-width: 100vw;
+}
+@media ((min-width: 600px)) {
+  .Recipe-root__card figure img, .Recipe-root__card div img {
+    min-width: unset;
+  }
 }
 .Recipe-root__card .label {
   color: #fff;
@@ -41,6 +57,15 @@
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem;
+}
+.Recipe-root__text {
+  width: 100%;
+  margin: 0 auto;
+}
+@media ((min-width: 600px)) {
+  .Recipe-root__text {
+    max-width: 100rem;
+  }
 }
 .Recipe-root__text hr {
   border: none;
@@ -239,7 +264,7 @@ html {
   box-sizing: inherit;
 }
 
-section > * {
+section > *, article > * {
   margin-bottom: 2rem !important;
 }
 
@@ -299,6 +324,10 @@ figcaption {
   font-size: 1.5rem;
 }
 
+a {
+  cursor: pointer;
+}
+
 :root {
   font-family: "Playfair Display", serif;
   font-size: 8px;
@@ -347,18 +376,18 @@ button {
   cursor: pointer;
 }
 
-.flex, .row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.flex, .row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root__card > div, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   display: flex;
 }
 
-.row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.row, .MockCard-root, .Bottom-root__socials, .ResultCard-root__tags, .ResultCard-root, .Navbar-root, .Navbar-root > ul, .Navbar-root > ul > ul, .col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root__card > div, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: row;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   row-gap: 1rem;
 }
 
-.col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
+.col, .Results-root__cards, .MockCard-root__text, .Bottom-root, .Recipe-root__card, .Recipe-root__text, .Recipe-root__card > div, .Recipe-root, .ResultCard-root__text, .Searchbar-root, .Home-root {
   flex-direction: column;
 }
 
@@ -394,8 +423,16 @@ button {
   margin-bottom: 0;
 }
 
+.Recipe-root__card > div {
+  align-items: center;
+}
 .Recipe-root__card {
   align-items: center;
+}
+@media ((min-width: 600px)) {
+  .Recipe-root__card {
+    flex-direction: row;
+  }
 }
 
 .Bottom-root {

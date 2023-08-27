@@ -25,16 +25,29 @@
             max-width: 75rem
 
 .Recipe-root
+    @include _breakpoints.breakpoint(sm)
+        margin-top: 0 !important
     &__card
         text-align: center
-        img
-            min-width: 100vw
+        figure, div
+            @include _breakpoints.breakpoint(sm)
+                margin: 0
+                width: 50vw
+            img
+                min-width: 100vw
+                @include _breakpoints.breakpoint(sm)
+                    min-width: unset
+
         .label
             color: _colors.$white
             background: _colors.$main
             width: fit-content
             padding: 1rem
     &__text
+        width: 100%
+        margin: 0 auto
+        @include _breakpoints.breakpoint(sm)
+            max-width: 100rem
         hr
             border: none
             height: 2px

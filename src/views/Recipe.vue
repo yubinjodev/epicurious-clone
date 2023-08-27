@@ -14,40 +14,49 @@ watch(recipe, () => {
   instructions.value = filterInstructions(recipe.value.strInstructions)
 });
 
+
 </script>
 
 <template>
-    <section class="Recipe-root" v-if="recipe" >
-        <div class="Recipe-root__card">
-            <p class="label caption">COOKBOOKS</p>
-            <h1>{{ recipe.strMeal }}</h1>
-            <p class="caption">BY FRANKIE GAW</p>
-            <time datetime="2023-01-09">January 9, 2023</time>
+    <article class="Recipe-root" v-if="recipe" >
+        <section class="Recipe-root__card">
+            <div>
+                <p class="label caption">COOKBOOKS</p>
+                <h1>{{ recipe.strMeal }}</h1>
+                <p class="caption">BY FRANKIE GAW</p>
+                <time datetime="2023-01-09">January 9, 2023</time>
+            </div>
             <figure>
-                <img alt="fish" v-if="recipe.strImageSource" :src="recipe.strImageSource">
-                <img alt="fish" v-else :src="recipe.strMealThumb">
+                <img :alt="recipe.strMeal" v-if="recipe.strImageSource" :src="recipe.strImageSource">
+                <img :alt="recipe.strMeal" v-else :src="recipe.strMealThumb">
                 <figcaption>Photo by Frankie Gaw</figcaption>
             </figure>
-        </div>
+        </section>
 
-        <div class="Recipe-root__text">
-            <h2 class="caption">Ingredients</h2>
-            <hr>
-            <p class="servings caption">Makes 4 servings</p>
-            <ul>
-                <li v-if="ingredients" v-for="ingredient in ingredients">
-                    {{ ingredient }}
-                </li>
-            </ul>
+        <section class="Recipe-root__text">
+            <div>
+                <h2 class="caption">Ingredients</h2>
+                <hr>
+                <p class="servings caption">Makes 4 servings</p>
+                <ul>
+                    <li v-if="ingredients" v-for="ingredient in ingredients">
+                        {{ ingredient }}
+                    </li>
+                </ul>
+            </div>
 
-            <dl>
-                <div v-if="instructions" v-for="(instruction, index) in instructions">
-                    <dt>STEP {{ index+1 }}</dt>
-                    <dd>{{ instruction }}</dd>
-                </div>
-            </dl>
-        </div>
-    </section>
+            <div>
+                <h2 class="caption">Instructions</h2>
+                <hr>
+                <dl>
+                    <div v-if="instructions" v-for="(instruction, index) in instructions">
+                        <dt>STEP {{ index+1 }}</dt>
+                        <dd>{{ instruction }}</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </article>
 </template>
 
 <style>

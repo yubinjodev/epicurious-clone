@@ -1,10 +1,9 @@
 <script setup>
-import $ from "jquery"
+import $ from "jquery";
 import { watch } from "vue";
+import MockCard from "../cards/MockCard.vue";
 import ResultCard from '../cards/ResultCard.vue';
-import getPosts from "../composables/getPosts"
-import MockCard from "../cards/MockCard.vue"
-import { onMounted, onUnmounted } from 'vue'
+import getPosts from "../composables/getPosts";
 
 const { query } = defineProps(["query"])
 const { results, recipesLength } = getPosts(query)
@@ -12,6 +11,9 @@ const { results, recipesLength } = getPosts(query)
 watch(results, ()=>{
     if(results.value !== 404){
         $(".Results-root").css("height", "100%")
+        $(".Bottom-root").css({
+            "position": "unset",
+        })
     }
     if(results.value === 404 || !results){
         $(".Bottom-root").css({

@@ -45,10 +45,14 @@
 
 .Recipe-root
     @extend .col
-    &__card, &__text
+    &__card, &__text, &__card > div
         @extend .col
+    &__card > div
+        align-items: center
     &__card
         align-items: center
+        @include _breakpoints.breakpoint(sm)
+            flex-direction: row
 
 .Bottom-root
     @extend .col
