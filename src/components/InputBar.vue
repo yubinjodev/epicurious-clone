@@ -26,7 +26,7 @@ $("#close").click(function(){
 </script>
 
 <template>
-    <section class="InputBar-root">
+    <div class="InputBar-root">
         <img alt="close" src="../assets/icons/close.svg" id="close"> 
 
         <form @submit.prevent="submitQuery">
@@ -37,5 +37,5 @@ $("#close").click(function(){
             placeholder="fish" 
             >
         </form>
-    </section>
+    </div>
 </template>

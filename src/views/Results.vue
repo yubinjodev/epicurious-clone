@@ -26,7 +26,7 @@ watch(results, ()=>{
 </script>
 
 <template>
-    <section class="Results-root">
+    <article class="Results-root">
         <p class="caption" v-if="recipesLength">
             {{ recipesLength }} matching results for {{ $route.query.search }}
         </p>
@@ -49,7 +49,7 @@ watch(results, ()=>{
                 />
             </div>
         </div>
-    </section>
+    </article>
 
 </template>
 

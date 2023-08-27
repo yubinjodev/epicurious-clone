@@ -1,9 +1,5 @@
 <template>
     <div class="Navbar-root">
-        <button>
-            <img alt="hamburger menu" src="../assets/icons/hamburger.svg">
-        </button>
-
         <a href="/">
             <img alt="text logo" src="../assets/icons/logo/text-logo.svg">
         </a>

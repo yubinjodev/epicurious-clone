@@ -16,12 +16,12 @@ const handleClickRecipeCard = ()=> {
 <template>
     <article class="ResultCard-root" @click="handleClickRecipeCard">
         <img :alt="strMeal" :src="strMealThumb"/>
-        <div class="ResultCard-root__text">
+        <section class="ResultCard-root__text">
             <strong class="caption">{{strCategory.toUpperCase()}}</strong>
             <h1>{{ strMeal }}</h1>
             <ul class="ResultCard-root__tags">
                 <li v-if="strTags" v-for="tag in strTags.split(',')">#{{ tag.toLowerCase() }}</li>
             </ul>
-        </div>
+        </section>
     </article>
 </template>
