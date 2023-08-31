@@ -1,5 +1,5 @@
 
-# HYDRA
+# Epicurious Clone
 
 Welcome to the Epicurious Clone project, a Vue.js application that serves as a recipe finder inspired by [Epicurious](https://www.epicurious.com/). This project utilizes Vue.js, SASS, JavaScript, and jQuery to create a user-friendly interface for searching and exploring various recipes. The application interacts with [TheMealDB API](https://www.themealdb.com/) to retrieve recipe data.
 
